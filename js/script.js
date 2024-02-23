@@ -1,3 +1,7 @@
+// ********************************************
+//                 EMAIL
+// ********************************************
+
 // Chiedo quante email saranno inserite
 const myNumbEmail = parseInt(prompt('Quante EMAIL vuoi inserire?'));
 
@@ -31,3 +35,40 @@ btnSer.addEventListener('click',function(){
       alert('La tua email NON è autorizzata all\'accesso!!!');
   }
 });
+
+// ********************************************
+//                 EMAIL
+// ********************************************
+
+
+
+
+// ********************************************
+//                 DADI
+// ********************************************
+
+const btnRoll = document.querySelector('.btnRoll');
+
+
+btnRoll.addEventListener('click',function(){
+  // TIRI CREATI
+  const playerDice = Math.ceil(Math.random() * 6);
+  console.log(playerDice);
+  const pcDice = Math.ceil(Math.random() * 6);
+  console.log(pcDice);
+
+  if(playerDice > pcDice){
+    alert('Hai VINTO!! il tuo punteggio è: ' + (playerDice) + ' il pc ha fatto: ' + (pcDice));
+  }else if(playerDice == pcDice){
+    alert('Hai Pareggiato il tuo punteggio è: ' + (playerDice) + ' il pc ha fatto: ' + (pcDice));
+  }else{
+    alert('Hai Perso.... il tuo punteggio è: ' + (playerDice) + ' il pc ha fatto: ' + (pcDice));
+  }
+
+});
+
+
+
+// ********************************************
+//                 DADI
+// ********************************************
