@@ -57,7 +57,18 @@ btnRoll.addEventListener('click',function(){
   const pcDice = Math.ceil(Math.random() * 6);
   console.log(pcDice);
 
-  if(playerDice > pcDice){
+  if((playerDice == pcDice) && (playerDice == 1)){
+    document.getElementById('risultato').innerHTML = 
+    `<div>
+      <h4 class="text-center">
+        FALLIMENTO CRITICO!
+      </h4>
+      <p class="text-center">
+        il tuo D6 ha rollato ${playerDice}, il pc ha estratto ${pcDice}
+      </p>
+    </div>
+    `;
+  }else if(playerDice > pcDice){
     document.getElementById('risultato').innerHTML = 
     `<div>
       <h4 class="text-center">
