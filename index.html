@@ -11,25 +11,43 @@
   <link rel="stylesheet" href="./assets/css/style.css">
   <title>EMAIL & DADI</title>
 </head>
-<body>
+<body class="second-color">
   
-  <div class="container-lg m-5">
-    <div class="d-flex flex-column  justify-content-center bg-info ">
+  <div class="container-xl d-flex justify-content-center my-3">
+    <div class="container-sm  d-flex flex-column  justify-content-center p-4 rounded-3 third-color">
       <h3 class="text-center ">Email</h3>
-      <label class="mx-1" for="inputEmail">Inserisci l'email da cercare</label>
-      <input type="text" class="inputEmail form-control" placeholder="email">
-      <button type="button" class="btnSer btn btn-success  my-2">Genera</button>  
+      <div class="row">
+        <div class="col-10">
+          <label class="m-1" for="inputEmail">Inserisci l'email da cercare</label>
+          <input type="text" class="inputEmail form-control" placeholder="email">
+        </div>
+        <div class="col-2 mt-4">
+          <button type="button" class="btnSer btn btn-success  my-2">Cerca</button>  
+        </div>
+      </div>
+      
+      
     </div>
 
 
-  <div class="container-lg m-5">
-    <div class="d-flex flex-column  justify-content-center bg-info ">
-      <h3 class="text-center ">DADI</h3>
+  <div class="container-xl  m-5">
+    <div class="d-flex  p-4 rounded-3 third-color w-100 ">
+      <div class="row row-cols-1 justify-content-center align-content-center w-100 ">
+        <div class="col-12 d-flex justify-content-center  ">
+          <h3 class="text-center ">DADI</h3>
+        </div>
+        <div class="col-12 d-flex justify-content-center ">
+          <button type="button" class="btnRoll btn btn-danger  my-2 w-50  ">Avvia</button>
+        </div>
+        <div class="col-12 d-flex justify-content-center ">
+          <div id="risultato"></div>
+        </div>
+      </div>
       
-      <button type="button" class="btnRoll btn btn-danger  my-2">Avvia</button>  
     </div>
     
   </div>
+  
   <script src="./js/script.js"></script>
 </body>
 </html>

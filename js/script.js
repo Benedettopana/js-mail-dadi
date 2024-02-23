@@ -33,7 +33,7 @@ btnSer.addEventListener('click',function(){
     alert('La tua email è autorizzata all\'accesso.');
   } else {
       alert('La tua email NON è autorizzata all\'accesso!!!');
-  }
+    }
 });
 
 // ********************************************
@@ -58,14 +58,47 @@ btnRoll.addEventListener('click',function(){
   console.log(pcDice);
 
   if(playerDice > pcDice){
-    alert('Hai VINTO!! il tuo punteggio è: ' + (playerDice) + ' il pc ha fatto: ' + (pcDice));
+    document.getElementById('risultato').innerHTML = 
+    `<div>
+      <h4 class="text-center">
+        Hai VINTO!
+      </h4>
+      <p class="text-center">
+        il tuo D6 ha rollato ${playerDice}, il pc ha estratto ${pcDice}
+      </p>
+    </div>
+    `;
+    // alert('Hai VINTO!! il tuo punteggio è: ' + (playerDice) + ' il pc ha fatto: ' + (pcDice));
   }else if(playerDice == pcDice){
-    alert('Hai Pareggiato il tuo punteggio è: ' + (playerDice) + ' il pc ha fatto: ' + (pcDice));
+    document.getElementById('risultato').innerHTML = 
+    `<div>
+      <h4 class="text-center">
+        Hai Pareggiato
+      </h4>
+      <p class="text-center">
+        il tuo D6 ha rollato ${playerDice}, il pc ha estratto ${pcDice}
+      </p>
+    </div>
+    `;
+    // alert('Hai Pareggiato il tuo punteggio è: ' + (playerDice) + ' il pc ha fatto: ' + (pcDice));
   }else{
-    alert('Hai Perso.... il tuo punteggio è: ' + (playerDice) + ' il pc ha fatto: ' + (pcDice));
+    document.getElementById('risultato').innerHTML = 
+    `<div>
+      <h4 class="text-center">
+        Hai PERSO....
+      </h4>
+      <p class="text-center">
+        il tuo D6 ha rollato ${playerDice}, il pc ha estratto ${pcDice}
+      </p>
+    </div>
+    `;
+    // alert('Hai Perso.... il tuo punteggio è: ' + (playerDice) + ' il pc ha fatto: ' + (pcDice));
   }
 
 });
+
+
+
 
 
 
