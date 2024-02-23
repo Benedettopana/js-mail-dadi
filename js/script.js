@@ -1,0 +1,1 @@
+const myNumbEmail = parseInt(prompt('Quante EMAIL vuoi inserire?'));
